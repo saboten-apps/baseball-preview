@@ -1,5 +1,5 @@
 const PREFIX = 'animal-baseball-phone:' + new URL(self.registration.scope).pathname + ':';
-const CACHE = PREFIX + '213f6a804215';
+const CACHE = PREFIX + 'ac0da251ca35';
 const CORE = ['./index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith(PREFIX) && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())));
