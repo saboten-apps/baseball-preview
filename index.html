@@ -2145,7 +2145,7 @@ function buildPlushShiba(f){
   const neckline=new THREE.Mesh(a.collar,a.ink);neckline.rotation.x=Math.PI/2;
   neckline.position.y=-.30;neckline.scale.set(1.12,.90,1);head.add(neckline);
   ball(a.cream,head,0,-.10,.33,.28,.12,.075);
-  ball(a.ink,head,0,-.11,.383,.038,.029,.024);
+  ball(a.ink,head,0,-.075,.425,.038,.029,.024);
   const eyes=[],lids=[];
   for(const s of [-1,1]){
     if(f.sp==='usagi'){
@@ -2179,7 +2179,7 @@ function buildPlushShiba(f){
     ball(a.pink,head,s*.29,-.095,.268,.035,.023,.016,false);
     const lid=mesh(MOUTHG,a.ink,head,s*.155,.025,.35,.90,.90,.90,false);lid.rotation.z=Math.PI;lid.visible=false;lids.push(lid);
   }
-  for(const s of [-1,1]){const mouth=mesh(MOUTHG,a.ink,head,s*.019,-.155,.38,.8,.8,.8,false);mouth.rotation.z=Math.PI;}
+  for(const s of [-1,1]){const mouth=mesh(MOUTHG,a.ink,head,s*.019,-.14,.43,.8,.8,.8,false);mouth.rotation.z=Math.PI;}
   if(f.sp==='human'){
     ball(a.ink,head,0,.23,-.025,.425,.23,.34);
     for(const x of [-.24,-.08,.08,.24])ball(a.ink,head,x,.235,.27,.105,.10,.08,false);
